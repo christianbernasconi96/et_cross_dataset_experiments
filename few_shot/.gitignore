@@ -1,0 +1,4 @@
+wandb
+lightning_logs
+kenn_tmp
+*/__pycache__/

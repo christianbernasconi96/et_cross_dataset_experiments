@@ -1,0 +1,4 @@
+
+####### Data ontonotes_shimaoka ######
+Processing runs from insides-lab-unimib-wandb/cross_dataset_ontonotes_shimaoka_fix
+../results/wandb_export/ontonotes_shimaoka/metrics_transposed.csv

@@ -1,0 +1,9 @@
+smart_save: True
+inference_params: 
+    name: ThresholdOrMaxInference
+    threshold: .5
+avoid_sanity_logging: True
+loss_module_params:
+  name : BCELossModule
+  loss_params :
+    name : BCELoss

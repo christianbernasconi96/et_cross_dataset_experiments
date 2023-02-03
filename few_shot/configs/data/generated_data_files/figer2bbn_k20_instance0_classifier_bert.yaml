@@ -1,0 +1,16 @@
+dataset_paths:
+  train: /home/cbernasconi/et/experiments/cross_dataset/notebooks/K_SHOT_DATASETS/bbn/train_bbn_k20_s0.json
+  dev: /home/cbernasconi/et/experiments/cross_dataset/notebooks/K_SHOT_DATASETS/bbn/dev_bbn_k20_s0.json
+  test: /home/remote_hdd/datasets/bbn/test-12k.json
+tokenizer_params:
+  name : MentionSentenceBERTTokenizedDataset
+  bertlike_model_name: bert-large-cased
+  max_mention_words: 6
+  max_right_words: 19
+  max_left_words: 19
+  max_tokens: 80
+rw_options:
+  modality: CreateAndSave # in [Create, CreateAndSave, Load]
+  dirpath: /home/remote_hdd/tokenized_datasets/bbn/cross_dataset_few_shot/figer2bbn/k_20/instance_0
+  light: True
+  types_list_path: /home/remote_hdd/tokenized_datasets/bbn/et_standard/types_list.txt

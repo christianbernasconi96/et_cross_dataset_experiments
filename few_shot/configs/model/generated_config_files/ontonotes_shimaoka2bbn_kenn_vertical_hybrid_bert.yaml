@@ -1,0 +1,29 @@
+ET_Network_params:
+  name : CrossDatasetEntityTypingNetwork
+  network_params:
+    encoder_params:
+      name : AdapterBERTEncoder
+      bertlike_model_name: bert-large-cased
+      adapter_arch : Pfeiffer
+      reduction_factor : 16
+    type_encoder_params:
+      name : OneHotTypeEncoder
+      trainable: False
+    input_projector_params:
+      name : KENNClassifierForCrossDatasetTraining
+      src_ckpt: /home/remote_hdd/trained_models/ontonotes_shimaoka/et_standard/classifier_adapter_bert_ms.ckpt
+      clause_weight: 2
+      clause_file_path: /home/cbernasconi/et/experiments/cross_dataset_v2/kbs/vertical/bbn/bbn2ontonotes_shimaoka_hybrid.txt
+      layers_parameters: 
+        '0':
+          in_features : encoder_dim
+          out_features: in_features
+          use_dropout: False
+          activation: relu
+        '1':
+          in_features: previous_out_features
+          out_features : type_number
+          use_dropout: False
+          activation: none
+      src2tgt_filepath: /home/cbernasconi/et/experiments/cross_dataset/mappings/ontonotes_shimaoka2bbn.json
+      tgt2src_filepath: /home/cbernasconi/et/experiments/cross_dataset/mappings/bbn2ontonotes_shimaoka.json

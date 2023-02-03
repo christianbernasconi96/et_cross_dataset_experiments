@@ -1,0 +1,28 @@
+loss_module_params:
+  name : BCELossModule
+  loss_params :
+    name : BCELoss
+ET_Network_params:
+  name : BaseEntityTypingNetwork
+  network_params:
+    encoder_params:
+      name : AdapterBERTEncoder
+      bertlike_model_name: bert-large-cased
+      adapter_arch : Pfeiffer
+      reduction_factor : 16
+    type_encoder_params:
+      name : OneHotTypeEncoder
+      trainable: False
+    input_projector_params:
+      name : Classifier
+      layers_parameters: 
+        '0':
+          in_features : encoder_dim
+          out_features: in_features
+          use_dropout: False
+          activation: relu
+        '1':
+          in_features: previous_out_features
+          out_features : type_number
+          use_dropout: False
+          activation: sigmoid

@@ -1,0 +1,5 @@
+deterministic: True
+gpus: 1
+limit_train_batches: 160
+max_epochs : 1000
+

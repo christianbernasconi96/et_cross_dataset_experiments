@@ -1,0 +1,16 @@
+dataset_paths:
+  train: /home/remote_hdd/datasets/ontonotes_shimaoka/train.json
+  dev: /home/remote_hdd/datasets/ontonotes_shimaoka/dev.json
+  test: /home/remote_hdd/datasets/ontonotes_shimaoka/test.json
+tokenizer_params:
+  name : MentionSentenceBERTTokenizedDataset
+  bertlike_model_name: bert-large-cased
+  max_mention_words: 5
+  max_right_words: 13
+  max_left_words: 13
+  max_tokens: 80
+rw_options:
+  modality: Load # in [Create, CreateAndSave, Load]
+  dirpath: /home/remote_hdd/tokenized_datasets/ontonotes_shimaoka/cross_dataset/bbn2ontonotes_shimaoka
+  light: True
+  types_list_path: /home/remote_hdd/tokenized_datasets/ontonotes_shimaoka/et_standard/types_list.txt

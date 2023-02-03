@@ -1,0 +1,16 @@
+dataset_paths:
+  train: /home/cbernasconi/et/experiments/cross_dataset/notebooks/K_SHOT_DATASETS/ontonotes_shimaoka/train_ontonotes_shimaoka_k10_s2.json
+  dev: /home/cbernasconi/et/experiments/cross_dataset/notebooks/K_SHOT_DATASETS/ontonotes_shimaoka/dev_ontonotes_shimaoka_k10_s2.json
+  test: /home/remote_hdd/datasets/ontonotes_shimaoka/test.json
+tokenizer_params:
+  name : MentionSentenceBERTTokenizedDataset
+  bertlike_model_name: bert-large-cased
+  max_mention_words: 6
+  max_right_words: 19
+  max_left_words: 19
+  max_tokens: 80
+rw_options:
+  modality: CreateAndSave # in [Create, CreateAndSave, Load]
+  dirpath: /home/remote_hdd/tokenized_datasets/ontonotes_shimaoka/cross_dataset_few_shot/figer2ontonotes_shimaoka/k_10/instance_2
+  light: True
+  types_list_path: /home/remote_hdd/tokenized_datasets/ontonotes_shimaoka/et_standard/types_list.txt

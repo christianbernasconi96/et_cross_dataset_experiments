@@ -1,0 +1,1 @@
+The mappings in this directory are intended as TGT2SRC in order to simplify their usage in the code.

@@ -1,0 +1,4 @@
+
+####### Data figer ######
+Processing runs from insides-lab-unimib-wandb/cross_dataset_figer_fix
+../results/wandb_export/figer/metrics_transposed.csv

@@ -1,0 +1,5 @@
+loss_module_params:
+  name : BCEMultiLossModule 
+  alpha : .5
+  loss_params :
+    name : BCELoss

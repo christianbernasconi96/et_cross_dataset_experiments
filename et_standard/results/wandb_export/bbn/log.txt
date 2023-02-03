@@ -1,0 +1,4 @@
+
+####### Data bbn ######
+Processing runs from insides-lab-unimib-wandb/cross_dataset_bbn_fix
+../results/wandb_export/bbn/metrics_transposed.csv
